@@ -10,7 +10,7 @@ rules:
     steps:
       - intent: greet
       - action: utter_greet
-      - action: utter_iamabot
+      - action: utter_introduce
       - action: utter_askname
 
   - rule: Sapa setelah memberikan nama
