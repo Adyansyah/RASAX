@@ -1,726 +1,743 @@
 version: "2.0"
 nlu:
-- intent: challenge_knowledge
-  examples: |
-    - apakah saya bisa bertanya mengenai materi [semester antara](materi)
-    - saya ingin bertanya mengenai materi [frekuensi kegiatan akademik](materi)
-    - apakah saya bisa bertanya mengenai [suasana dan kegiatan akademik](materi)?
-- intent: give_name
-  examples: |
-    - nama saya [Angga](name)
-    - saya [Aditya](name)
-    - nama aku [Amelia](name)
-    - aku [Fidyah](name)
-    - nama [putra](name)
-    - nama saya [adit](name)
-    - nama saya Nano
-    - nama saya [angga](name) dwi
-    - [Putra](name)
-    - [Nano](name)
-    - [adit](name)
-    - nama saya [dindap](name)
-    - jama saya [dindap](name)
-    - nama saya [asep](name)
-    - [asep](name)
-- intent: feedback_give
-  examples: |
-    - saran saya
-    - saran aku
-    - menurut saya
-    - menurut aku
-    - saran saya untuk kedepannya dibuatkan story agar lebih interaktif
-- intent: faq/tujuan_belajar_unsri
-  examples: |
-    - apa tujuan [pembelajaran](belajar) di [universitas sriwijaya](univ)
-    - tujuan [belajar](belajar) di [unsri](univ)
-- intent: faq/kewajiban_mahasiswa
-  examples: |
-    - apa kewajiban mahasiswa [universitas sriwijaya](univ)
-    - kewajiban mahasiswa [unsri](univ)
-    - kewajiban mahasiswa
-- intent: faq/syarat_akademik_unsri
-  examples: |
-    - syarat apa saja untuk mengikuti kegiatan akademik di [universitas sriwijaya](univ)
-    - apa saja syarat untuk mengikuti kegiatan akademik di [unsri](univ)
-    - apa syarat untuk mengikuti kegiatan akademik di [unsri](univ)
-    - syarat apa saja mengikuti kegiatan akademik di [universitas sriwijaya](univ)
-    - apa saja syarat mengikuti kegiatan akademik di [unsri](univ)
-    - apa syarat mengikuti kegiatan akademik di [universitas sriwijaya](univ)
-    - syarat mengikuti kegiatan akademik di [unsri](univ)
-    - bagaimana syarat menjadi mahasiswa
-- intent: faq/peran_akademik_unsri
-  examples: |
-    - apa saja peran dari akademik di [universitas sriwijaya](univ)
-    - apa peran dari akademik di [unsri](univ)
-    - apa saja peran akademik di [universitas sriwijaya](univ)
-    - apa peran akademik di [unsri](univ)
-    - peran dari akademik di [unsri](univ)
-    - peran akademik di [unsri](univ)
-- intent: faq/penting_akademik_unsri
-  examples: |
-    - apa pentingnya dari akademik di [unsri](univ)
-    - apa pentingnya akademik di [universitas sriwijaya](univ)
-    - pentingnya dari akademik di [unsri](univ)
-    - pentingnya akademik di [universitas sriwijaya](univ)
-    - apakah akademik penting?
-- intent: faq/kegiatan_akademik_unsri
-  examples: |
-    - bagaimana kegiatan akademik di [universitas sriwijaya](univ) dilaksanakan
-    - bagaimana kegiatan akademik di [unsri](univ)
-    - kegiatan akademik di [universitas sriwijaya](univ) dilaksanakan
-    - kegiatan akademik di [unsri](univ)
-    - akademik kegiatan [unsri](univ)[unsri](univ)
-    - akademik kegiatan [unsri](univ)[unsri](univ)
-- intent: faq/pelaksanaan_kmmb
-  examples: |
-    - bagaimana pelaksanaan kampus merdeka merdeka belajar
-    - bagaimana pelaksanaan kmmb
-    - pelaksanaan kampus merdeka merdeka belajar
-    - pelaksanaan kmmb
-    - apa itu kmmb
-- intent: faq/proses_belajar_unsri
-  examples: |
-    - bagaimana proses [pembelajaran](belajar) di [universitas sriwijaya](univ)
-    - proses [belajar](belajar) di [unsri](univ)
-- intent: faq/tujuan_unsri
-  examples: |
-    - apa tujuan di [universitas sriwijaya](univ)
-    - apa tujuan [universitas sriwijaya](univ)
-    - tujuan unsri [unsri](univ)
-    - tujuan [unsri](univ)[unsri](univ)
-    - tujuan [unsri](univ)[unsri](univ)
-- intent: faq/pelaksanaan_kegiatan_akademik
-  examples: |
-    - kapan pelaksanaan kegiatan akademik
-    - mohon info jadwal kegiatan akademik
-    - kapan kegiatan akademik dimulai
-    - kegiatan akademik kapan
-    - kapan kegiatan akademik dilaksanakan
-- intent: faq/kehadiran
-  examples: |
-    - apakah selama kuliah boleh izin
-    - batas izin per semester
-    - syarat persentase kehadiran
-    - berapa kali boleh izin kuliah
-    - boleh ga izin 4 kali
-    - boleh izin 4 kalo gak?
-- intent: faq/absen_kuliah
-  examples: |
-    - bagaimana jika tidak hadir lebih dari batas?
-    - yang dilakukan jika tidak hadir lebih dari 3 kali?
-    - kalau izin 4 kali boleh ikut uas tidak?
-    - bolehkah ikut ujian semester jika izin lebih dari 3 kali?
-- intent: faq/jumlah_waktu_akademik
-  examples: |
-    - berapa lama waktu akademik per semester?
-    - satu semester berapa minggu?
-- intent: faq/semester_antara
-  examples: |
-    - apa itu [sp](SP)?
-    - mau tanya [semester antara](SP)
-    - [semester antara](SP) untuk apa?
-    - kapan [sp](SP)?
-    - kapan [semester antara](SP) dibuka?
-    - syarat mengambil [sp](SP)
-    - jelasin [semester antara](SP) dong
-    - [sp](SP) itu apa?
-    - [mata kuliah](MK) yang boleh diambil di [sp](SP)
-    - apa saja [mk](MK) di [sp](SP)
-    - [mk](MK) di [semester antara](SP)
-    - [mata kuliah](MK) di [semester antara](SP) apa aja
-    - [mk](MK) di [semester antara](SP) boleh bebas?
-    - [mata kuliah](MK) yang akan dibuka di [sp](SP)
-    - boleh tidak mengambil [mata kuliah](MK) semester depan di [semester antara](SP)?
-    - boleh tidak ambil [mk](MK) praktikum di [sp](SP)?
-    - boleh tidak cuma mengambil 1 [mata kuliah](MK) di [semester antara](SP)?
-    - apa itu [sp](SP)[sp](SP)
-    - syarat-syarat [semester antara](SP)[semester antara](SP)
-    - ketentuan [semester antara](SP)[semester antara](SP)
-    - apa itu [sp](SP)[sp](SP)
-    - [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
-    - syarat-syarat [semester antara](SP)[semester antara](SP)
-    - ketentuan [semester antara](SP)[semester antara](SP)
-- intent: faq/mahasiswa_semester_antara
-  examples: |
-    - jumlah mahasiswa satu kelas di semester antara?
-    - minimal jumlah mahasiswa satu kelas di semester antara
-    - berapa mahasiswa di semester antara
-    - kalau satu kelas di semester antara hanya 5 mahasiswa boleh tidak?
-    - jumlah minimal mahasiswa untuk mengambil [semester antara](SP)
-- intent: faq/durasi_semester_antara
-  examples: |
-    - berapa lama [semester antara](SP)?
-    - [sp](SP) berapa bulan
-    - [sp](SP) berapa lama
-    - [semester antara](SP) berapa minggu
-    - apakah [sp](SP) hanya 1 bulan?
-- intent: faq/tempat_dan_sistem_perkuliahan
-  examples: |
-    - Bagaimana perkuliahan dilaksanakan?
-    - Dimana perkuliahan dilaksanakan?
-    - Bagaimana sistem perkuliahan dilaksanakan?
-    - Kapan perkuliahan dilaksanakan?
-    - Dimana kita bisa melihat jadwal kuliah?
-    - Dimana kita bisa melihat jadwal perkuliahan?
-    - Dimana kita melihat jadwal kuliah?
-    - Kapan kuliah masuk?
-    - Kapan masuk kuliah?
-    - Kapan kuliah?
-    - Kapan perkuliahan dimulai?
-    - kapan kuliah?
-- intent: faq/perkuliahan_diluar_jam_kerja
-  examples: |
-    - Bagaimana jika kegiatan akademik yang dilaksanakan di luar jam kerja?
-    - Bagaimana jika kuliah di luar jam kerja?
-    - Gimana kalau kuliah di luar jam kerja?
-    - Bagaimana jika pergantian kuliah bertabrakan dengan [mata kuliah](MK) lain?
-    - perubahan waktu kuliah mengganggu mk lain?
-    - bagaimana kuliah di luar jam kerja?
-- intent: faq/sistem_e-learning
-  examples: |
-    - Bagaimana sistem perkuliahan di [e-learning](Eler)?
-    - Cara menggunakan [elearning](Eler)?
-    - Bagaimana cara menggunakan [elearning](Eler)?
-    - Cara pelaksanaan [e-learning](Eler)?
-    - Bagaimana sistem perkuliahan daring?
-    - Bagaimana sistem kuliah daring?
-    - Bagaimana sistem perkuliahan online?
-    - Bagaimana sistem kuliah online?
-    - sistem perkuliahan di [e-learning](Eler)[e-learning](Eler)
-    - sistem perkuliahan di [e-learning](Eler)[e-learning](Eler)
-- intent: faq/perubahan_mata_kuliah
-  examples: |
-    - Apakah mahasiswa bisa mengubah [mata kuliah](MK)?
-    - Apakah [mata kuliah](MK) yang telah di ambil bisa diubah?
-    - Kapan batas waktu mahasiswa dapat mengubah [mata kuliah](MK)?
-    - Kapan terakhir perubahan [matkul](MK) dibuka?
-    - Sampai kapan [mata kuliah](MK) dapat diubah?
-    - Bagaimana sistem perubahan [mk](MK)?
-    - Bagaimana cara merubah [mata kuliah](MK)?
-    - gimana merubah jadwal [mk](MK)[mk](MK)
-    - gimana merubah jadwal [mk](MK)[mk](MK)
-- intent: faq/kegiatan_akademik_akhir_program
-  examples: |
-    - Bagaimana sistem Kegiatan Akademik Pada Akhir Program ?
-    - Bagaimana sistem Kegiatan Akademik di Akhir Program ?
-    - Apa kegiatan akademik pada akhir program?
-    - Bagaimana sistem Kegiatan Akademik [sarjana](Pendidikan) pada akhir program?
-    - Bagaimana Kegiatan Akademik [profesi](Pendidikan) pada akhir program?
-    - apa kegiatan akademik di akhir program
-    - kegtan akedmik di akhir program
-    - sistem kegiatan akademik di akhir program
-    - kegiatan akedemik di akhir program
-- intent: faq/masa_studi_akademik
-  examples: |
-    - kapan masa studi dihitung?
-    - kapan masa studi dimulai?
-    - sejak kapan masa studi diihitung?
-    - sejak kapan masa studi dimulai?
-    - kapan masa studi berakhir?
-    - kapan masa studi selesai?
-    - kapan masa studi dihitung selesai?
-    - apakah stop out dihitung masa studi?
-    - apakah SO dihitung masa studi?
-    - apakah stop out terhitung dalam masa studi?
-    - apakah SO terhitung dalam masa studi?
-    - apa kegunaan masa studi akademik?
-    - untuk mahasiswa pindahan apakah masa studi di perguruan tinggi awal dihitung?
-    - kapan masa studi dihitung
-- intent: faq/masa_studi_administrasi
-  examples: |
-    - apa itu masa studi administrasi?
-    - untuk apa masa studi administrasi?
-    - apa kegunaan masa studi administrasi ?
-    - apa itu masa studi administrasi
-- intent: faq/beban_studi_sarjana
-  examples: |
-    - bagaimana pembagian beban studi ?
-    - bagaimana pembagian beban studi per semester ?
-    - berapa sks minimal setiap semester?
-    - berapa sks maksimal setiap semester?
-    - berapa sks yang bisa diambil pada semester pertama ?
-    - berapa jumlah sks yang bisa diambil pada semester pertama?
-    - bagaimana menentukan beban studi setiap semester?
-- intent: faq/pembimbing_akademik
-  examples: |
-    - siapa saja yang didampingi [pembimbing akademik](pa)
-    - apa itu [PA](pa)
-    - [PA](pa) adalah
-    - apa itu dosen [PA](pa)
-    - apa itu dosen [pembimbing akademik](pa)
-    - dosen PA adalah
-- intent: faq/tugas_pembimbing_akademik
-  examples: |
-    - Tugas [pembimbing akademik](pa) adalah
-    - Apa tugas [pembimbing akademik](pa)
-    - Apakah [pembimbing akademik](pa) memberikan bimbingan non akademik?
-    - Hal apa saja yang menjadi tugas [pembimbing akademik](pa)
-    - Tugas Dosen [PA](pa)
-    - Tugas Dosen Pembimbing Akademik adalah
-    - Tugas – tugas Dosen [PA](pa)
-    - Dosen [PA](pa) bertugas untuk
-    - Apa saja tugas dari [PA](pa)
-    - Apa saja tugas [pembimbing akademik](pa)
-    - tugas [PA](pa)[PA](pa) adalah?
-    - apa saja tugas [pembimbing akademik](pa)[pembimbing akademik](pa)?
-    - tugas [PA](pa)[PA](pa) adalah?
-- intent: faq/kewajiban_pembimbing_akademik
-  examples: |
-    - Apa kewajiban [pembimbing akademik](pa)
-    - Hal apa yang harus dilakukan [pembimbing akademik](pa)
-    - Dosen [PA](pa) berkawajiban untuk
-    - Hal yang harus dilakukan Dosen [PA](pa)
-    - Kewajiban Dosen PA](pa)
-    - Kewajiban Dosen [pembimbing akademik](pa)
-    - kewajiban [pa](pa)[pa](pa)
-    - kewajiban dosen
-    - kewajiban [pa](pa)[pa](pa)
-- intent: faq/hak_pa
-  examples: |
-    - apa hak [pembimbing akademik](pa)
-    - hak [PA](pa)
-    - apa hak [PA](pa)
-    - [PA](pa) memiliki hak apa
-    - hak apa yang dimiliki [PA](pa)
-    - apa hak [PA](pa) atas mahasiswa
-    - [PA](pa) punya hak apa atas mahasiswa
-    - hak [pembimbing akademik](pa)
-    - [pembimbing akademik](pa) memiliki hak apa
-    - hak apa yang dimiliki [pembimbing akademik](pa)
-    - apa hak [pembimbing akademik](pa) atas mahasiswa
-    - [pembimbing akademik](pa) punya hak apa atas mahasiswa
-    - hak dosen [pa](pa)
-    - hak [pa](pa)[pa](pa) apa
-    - hak [pa](pa)[pa](pa)
-    - hak [pembimbing akademik](pa)[pembimbing akademik](pa) apa
-    - apa hak [pa](pa)[pa](pa)
-    - hak [pa](pa)[pa](pa)
-    - hak [pa](pa)[pa](pa) apa
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - halo
-    - Hi
-    - Hallo
-    - hallo
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-- intent: faq/mk_semester_antara
-  examples: |
-    - [mata kuliah](MK)[mata kuliah](MK)  yang boleh diambil di [semester antara](SP)[semester antara](SP)
-    - ketentuan [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
-    - [mata kuliah](MK)[mata kuliah](MK) di [semester antara](SP)[semester antara](SP)
-    - [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
-    - [mata kuliah](MK)[mata kuliah](MK)  yang boleh diambil di [semester antara](SP)[semester antara](SP)
-    - ketentuan [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
-    - [mata kuliah](MK)[mata kuliah](MK) di [semester antara](SP)[semester antara](SP)
-- intent: faq/beban_masa_studi_minimal_diploma
-  examples: |
-    - berapa lama masa studi d3?
-    - berapa lama masa studi diploma tiga?
-    - berapa lama masa studi d3 paling lambat?
-    - masa studi d3 paling lambat?
-    - berapa lama masa studi diploma tiga paling lambat?
-    - masa studi diploma tiga paling lambat ?
-    - berapa banyak minimal sks d3?
-    - berapa minimal sks diploma tiga?
-    - berapa minimal sks d3?
-    - berapa banyak minimal sks diploma tiga?
-- intent: faq/beban_masa_studi_minimal_sarjana
-  examples: |
-    - berapa lama masa studi s1?
-    - berapa lama masa studi sarjana?
-    - berapa lama masa studi s1 paling lambat?
-    - masa studi s1 paling lambat?
-    - berapa lama masa studi sarjana paling lambat?
-    - masa studi sarjana paling lambat ?
-    - berapa banyak minimal sks s1?
-    - berapa minimal sks sarjana?
-    - berapa minimal sks s1?
-    - berapa banyak minimal sks sarjana?
-- intent: faq/beban_masa_studi_minimal_profesi
-  examples: |
-    - berapa lama masa studi profesi?
-    - berapa lama masa studi profesi paling lambat?
-    - masa studi profesi paling lambat?
-    - berapa banyak minimal sks profesi?
-    - berapa minimal sks profesi?
-- intent: faq/beban_masa_studi_minimal_Magister
-  examples: |
-    - berapa lama masa studi s2?
-    - berapa lama masa studi s2 paling lambat?
-    - masa studi s2 paling lambat?
-    - berapa lama masa studi Magister?
-    - berapa lama masa studi Magister paling lambat?
-    - masa studi Magister paling lambat?
-    - berapa banyak minimal sks s2?
-    - berapa minimal sks magister?
-    - berapa minimal sks s2?
-    - berapa banyak minimal sks magister?
-- intent: faq/beban_masa_studi_minimal_spesialis
-  examples: |
-    - berapa lama masa studi spesialis?
-    - berapa lama masa studi spesialis paling lambat?
-    - masa studi spesialis paling lambat ?
-    - berapa minimal sks spesialis?
-    - berapa banyak minimal sks spesialis?
-- intent: faq/beban_masa_studi_minimal_doktor
-  examples: |
-    - berapa lama masa studi s3 ?
-    - berapa lama masa studi s3 paling lambat?
-    - masa studi s3 paling lambat?
-    - berapa lama masa studi doktor?
-    - berapa lama masa studi doktor paling lambat?
-    - masa studi doktor paling lambat?
-    - berapa banyak minimal sks s3?
-    - berapa minimal sks doktor?
-    - berapa minimal sks s3?
-    - berapa banyak minimal sks doktor?
-- intent: faq/beban_masa_studi_minimal_subspeasialis
-  examples: |
-    - berapa lama masa studi subspesialis?
-    - berapa lama masa studi subspesialis paling lambat?
-    - masa studi subspesialis paling lambat ?
-    - berapa minimal sks subspesialis?
-    - berapa banyak minimal sks subspesialis?
-- intent: faq/tugas_akhir_subtansi
-  examples: |
-    - apa saja substansi tugas akhir setiap program pendidikan ?
-    - setiap program pendidikan substansi tugas akhirnya apa saja ?
-    - apa saja substansi tugas akhir setiap program ?
-    - setiap program pendidikan substansi tugas akhirnya apa aja ?
-    - apa saja tugas akhir setiap program pendidikan ?
-    - apa saja tugas akhir setiap program ?
-    - setiap program pendidikan tugas akhirnya apa aja ?
-    - setiap program pendidikan tugas akhirnya apa saja ?
-    - tugas akhir setiap program pendidikan apa aja ?
-    - tugas akhir setiap program pendidikan apa saja ?
-    - tugas akhir apa aja ?
-    - tugas akhir apa ?
-    - tugas akhir ?
-- intent: faq/peraturan_substansi
-  examples: |
-    - aturan mengenai substansi tugas akhir ?
-    - aturan mengenai tugas akhir ?
-    - tugas akhir diatur dalam ?
-    - tugas akhir diatur pada ?
-- intent: faq/waktu_persiapan_tugasAkhir
-  examples: |
-    - kapan persiapan tugas akhir ?
-    - kapan persiapan pelaksanaan tugas akhir ?
-    - tugas akhir persiapannya kapan ?
-    - tugas akhir persiapan pelaksanaan nya kapan ?
-    - persiapan tugas akhir ?
-    - persiapan pelaksanaan tugas akhir ?
-    - waktu persiapan pelaksanaan tugas akhir ?
-    - waktu persiapan tugas akhir ?
-- intent: faq/level9_KNNI
-  examples: |
-    - apa level 9 knni ?
-    - apa level sembilan knni ?
-    - apa level knni program doktor ?
-    - apa level knni program s3 ?
-    - apa level knni doktor ?
-    - apa level knni s3 ?
-    - level 9 knni ?
-    - level sembilan knni ?
-    - level knni program doktor ?
-    - level knni program s3 ?
-    - level knni doktor ?
-    - level knni s3 ?
-    - knni program doktor ?
-    - knni program s3 ?
-    - knni s3 ?
-    - knn1 level 9 ?
-- intent: faq/level8_KNNI
-  examples: |
-    - apa level 8 knni ?
-    - apa level delapan knni ?
-    - apa level knni program magister ?
-    - apa level knni program s2 ?
-    - apa level knni magister ?
-    - apa level knni s2 ?
-    - level 8 knni ?
-    - level delapan knni ?
-    - level knni program magister ?
-    - level knni program s2 ?
-    - level knni magister ?
-    - level knni s2 ?
-    - knni program magister ?
-    - knni program s2 ?
-    - knni s2 ?
-    - knn1 level 8 ?
-- intent: faq/level7_KNNI
-  examples: |
-    - apa level 7 knni ?
-    - apa level tujuh knni ?
-    - apa level knni program profesi dan spesialis ?
-    - apa level knni program spesialis ?
-    - apa level knni program profesi ?
-    - apa level knni profesi dan spesialis ?
-    - apa level knni spesialis ?
-    - apa level knni profesi ?
-    - level 7 knni ?
-    - level tujuh knni ?
-    - level knni program profesi dan spesialis ?
-    - level knni program spesialis ?
-    - level knni program profesi ?
-    - level knni profesi dan spesialis ?
-    - level knni profesi ?
-    - level knni spesialis ?
-    - knni program profesi dan spesialis ?
-    - knni program spesialis ?
-    - knni program profesi ?
-    - knni level 7 ?
-- intent: faq/level6_KNNI
-  examples: |
-    - apa level 6 knni ?
-    - apa level enam knni ?
-    - apa level knni program sarjana ?
-    - apa level knni program s1 ?
-    - apa level knni sarjana ?
-    - apa level knni s1 ?
-    - level 6 knni ?
-    - level enam knni ?
-    - level knni program sarjana ?
-    - level knni program s1 ?
-    - level knni sarjana ?
-    - level knni s1 ?
-    - knni program sarjana ?
-    - knni program s1 ?
-    - knni s1 ?
-    - knn1 level 6 ?
-- intent: faq/level_KNNI
-  examples: |
-    - apa aja level knni ?
-    - apa saja level knni ?
-    - knni level nya apa aja ?
-    - knni level nya apa saja ?
-    - apa aja level-level knni ?
-    - apa saja level-level knni ?
-    - knni level-level nya apa aja ?
-    - knni level-level nya apa saja ?
-    - level knni ?
-    - level-level knni ?
-    - level knni setiap program apa aja ?
-    - level knni setiap program pendidikan apa aja ?
-    - level knni setiap program apa saja ?
-    - level knni setiap program pendidikan apa saja ?
-    - level knni setiap program ?
-    - level knni setiap program pendidikan ?
-    - level-level knni setiap program apa aja ?
-    - level-level knni setiap program pendidikan apa aja ?
-    - level-level knni setiap program apa saja ?
-    - level-level knni setiap program pendidikan apa saja ?
-    - level-level knni setiap program ?
-    - level-level knni setiap program pendidikan ?
-    - knni setiap program pendidikan ?
-    - knni setiap program ?
-    - knni ?
-- intent: faq/substansi_Diploma
-  examples: |
-    - apa substansi tugas akhir diploma ?
-    - apa substansi tugas akhir diploma tiga?
-    - apa substansi tugas akhir diploma 3 ?
-    - apa substansi tugas akhir program diploma ?
-    - apa substansi tugas akhir program diploma tiga ?
-    - apa substansi tugas akhir program diploma 3 ?
-    - apa substansi tugas akhir d3 ?
-    - apa substansi tugas akhir program d3 ?
-    - apa tugas akhir diploma ?
-    - apa tugas akhir diploma tiga ?
-    - apa tugas akhir diploma 3 ?
-    - apa tugas akhir program diploma ?
-    - apa tugas akhir program diploma tiga ?
-    - apa tugas akhir program diploma 3?
-    - apa tugas akhir d3 ?
-    - apa tugas akhir program d3 ?
-    - tugas akhir diploma apa ?
-    - tugas akhir diploma tiga apa ?
-    - tugas akhir diploma 3 apa ?
-    - tugas akhir diploma ?
-    - tugas akhir diploma tiga ?
-    - tugas akhir diploma 3 ?
-    - tugas akhir program diploma apa ?
-    - tugas akhir program diploma tiga apa ?
-    - tugas akhir program diploma 3 apa ?
-    - tugas akhir program diploma ?
-    - tugas akhir program diploma 3 ?
-    - tugas akhir program diploma tiga ?
-    - tugas akhir d3 apa ?
-    - tugas akhir d3 ?
-    - tugas akhir program d3 apa ?
-    - tugas akhir program d3 ?
-    - apa tugas akhir d3
-- intent: faq/substansi_Sarjana
-  examples: |
-    - apa substansi tugas akhir sarjana ?
-    - apa substansi tugas akhir program sarjana ?
-    - apa substansi tugas akhir s1 ?
-    - apa substansi tugas akhir program s1 ?
-    - apa tugas akhir sarjana ?
-    - apa tugas akhir program sarjana ?
-    - apa tugas akhir s1 ?
-    - apa tugas akhir program s1 ?
-    - tugas akhir sarjana apa ?
-    - tugas akhir sarjana ?
-    - tugas akhir program sarjana apa ?
-    - tugas akhir program sarjana ?
-    - tugas akhir s1 apa ?
-    - tugas akhir s1 ?
-    - tugas akhir program s1 apa ?
-    - tugas akhir program s1 ?
-- intent: faq/substansi_Magister
-  examples: |
-    - apa substansi tugas akhir magister ?
-    - apa substansi tugas akhir program magister ?
-    - apa substansi tugas akhir s2 ?
-    - apa substansi tugas akhir program s2 ?
-    - apa tugas akhir magister ?
-    - apa tugas akhir program magister ?
-    - apa tugas akhir s2 ?
-    - apa tugas akhir program s2 ?
-    - tugas akhir magister apa ?
-    - tugas akhir magister ?
-    - tugas akhir program magister apa ?
-    - tugas akhir program magister ?
-    - tugas akhir s2 apa ?
-    - tugas akhir s2 ?
-    - tugas akhir program s2 apa ?
-    - tugas akhir program s2 ?
-- intent: faq/substansi_Doktor
-  examples: |
-    - apa substansi tugas akhir doktor ?
-    - apa substansi tugas akhir program doktor ?
-    - apa substansi tugas akhir s3 ?
-    - apa substansi tugas akhir program s3 ?
-    - apa tugas akhir doktor ?
-    - apa tugas akhir program doktor ?
-    - apa tugas akhir s3 ?
-    - apa tugas akhir program s3 ?
-    - tugas akhir doktor apa ?
-    - tugas akhir dokor ?
-    - tugas akhir program doktor apa ?
-    - tugas akhir program doktor ?
-    - tugas akhir s3 apa ?
-    - tugas akhir s3 ?
-    - tugas akhir program s3 apa ?
-    - tugas akhir program s3 ?
-- lookup: univ
-  examples: |
-    - universitas sriwijaya
-    - unsri
-- lookup: belajar
-  examples: |
-    - pembelajaran
-    - belajar
-- lookup: SP
-  examples: |
-    - semester antara
-    - semester pendek
-    - sp
-- lookup: MK
-  examples: |
-    - mata kuliah
-    - mk
-    - matkul
-- lookup: Eler
-  examples: |
-    - e-learning
-    - elearning
-- lookup: Pendidikan
-  examples: |
-    - diploma
-    - sarjana
-    - spesialis
-    - magister
-    - doktor
-    - profesi
-- lookup: pa
-  examples: |
-    - PA
-    - pembimbing akademik
-- lookup: materi
-  examples: |
-    - suasana dan kegiatan akademik
-    - syarat mengikuti kegiatan akademik
-    - frekuensi kegiatan akademik
-    - semester anatara
+  - intent: challenge_knowledge
+    examples: |
+      - apakah saya bisa bertanya mengenai materi [semester antara](materi)
+      - saya ingin bertanya mengenai materi [frekuensi kegiatan akademik](materi)
+      - apakah saya bisa bertanya mengenai [suasana dan kegiatan akademik](materi)?
+  - intent: give_name
+    examples: |
+      - nama saya [Angga](name)
+      - saya [Aditya](name)
+      - nama aku [Amelia](name)
+      - aku [Fidyah](name)
+      - nama [putra](name)
+      - nama saya [adit](name)
+      - nama saya Nano
+      - nama saya [angga](name) dwi
+      - [Putra](name)
+      - [Nano](name)
+      - [adit](name)
+      - nama saya [dindap](name)
+      - jama saya [dindap](name)
+      - nama saya [asep](name)
+      - [asep](name)
+  - intent: feedback_give
+    examples: |
+      - saran saya
+      - saran aku
+      - menurut saya
+      - menurut aku
+      - saran saya untuk kedepannya dibuatkan story agar lebih interaktif
+  - intent: faq/tujuan_belajar_unsri
+    examples: |
+      - apa tujuan [pembelajaran](belajar) di [universitas sriwijaya](univ)
+      - tujuan [belajar](belajar) di [unsri](univ)
+  - intent: faq/kewajiban_mahasiswa
+    examples: |
+      - apa kewajiban mahasiswa [universitas sriwijaya](univ)
+      - kewajiban mahasiswa [unsri](univ)
+      - kewajiban mahasiswa
+  - intent: faq/syarat_akademik_unsri
+    examples: |
+      - syarat apa saja untuk mengikuti kegiatan akademik di [universitas sriwijaya](univ)
+      - apa saja syarat untuk mengikuti kegiatan akademik di [unsri](univ)
+      - apa syarat untuk mengikuti kegiatan akademik di [unsri](univ)
+      - syarat apa saja mengikuti kegiatan akademik di [universitas sriwijaya](univ)
+      - apa saja syarat mengikuti kegiatan akademik di [unsri](univ)
+      - apa syarat mengikuti kegiatan akademik di [universitas sriwijaya](univ)
+      - syarat mengikuti kegiatan akademik di [unsri](univ)
+      - bagaimana syarat menjadi mahasiswa
+  - intent: faq/peran_akademik_unsri
+    examples: |
+      - apa saja peran dari akademik di [universitas sriwijaya](univ)
+      - apa peran dari akademik di [unsri](univ)
+      - apa saja peran akademik di [universitas sriwijaya](univ)
+      - apa peran akademik di [unsri](univ)
+      - peran dari akademik di [unsri](univ)
+      - peran akademik di [unsri](univ)
+  - intent: faq/penting_akademik_unsri
+    examples: |
+      - apa pentingnya dari akademik di [unsri](univ)
+      - apa pentingnya akademik di [universitas sriwijaya](univ)
+      - pentingnya dari akademik di [unsri](univ)
+      - pentingnya akademik di [universitas sriwijaya](univ)
+      - apakah akademik penting?
+  - intent: faq/kegiatan_akademik_unsri
+    examples: |
+      - bagaimana kegiatan akademik di [universitas sriwijaya](univ) dilaksanakan
+      - bagaimana kegiatan akademik di [unsri](univ)
+      - kegiatan akademik di [universitas sriwijaya](univ) dilaksanakan
+      - kegiatan akademik di [unsri](univ)
+      - akademik kegiatan [unsri](univ)[unsri](univ)
+      - akademik kegiatan [unsri](univ)[unsri](univ)
+  - intent: faq/pelaksanaan_kmmb
+    examples: |
+      - bagaimana pelaksanaan kampus merdeka merdeka belajar
+      - bagaimana pelaksanaan kmmb
+      - pelaksanaan kampus merdeka merdeka belajar
+      - pelaksanaan kmmb
+      - apa itu kmmb
+  - intent: faq/proses_belajar_unsri
+    examples: |
+      - bagaimana proses [pembelajaran](belajar) di [universitas sriwijaya](univ)
+      - proses [belajar](belajar) di [unsri](univ)
+  - intent: faq/tujuan_unsri
+    examples: |
+      - apa tujuan di [universitas sriwijaya](univ)
+      - apa tujuan [universitas sriwijaya](univ)
+      - tujuan unsri [unsri](univ)
+      - tujuan [unsri](univ)[unsri](univ)
+      - tujuan [unsri](univ)[unsri](univ)
+  - intent: faq/pelaksanaan_kegiatan_akademik
+    examples: |
+      - kapan pelaksanaan kegiatan akademik
+      - mohon info jadwal kegiatan akademik
+      - kapan kegiatan akademik dimulai
+      - kegiatan akademik kapan
+      - kapan kegiatan akademik dilaksanakan
+  - intent: faq/kehadiran
+    examples: |
+      - apakah selama kuliah boleh izin
+      - batas izin per semester
+      - syarat persentase kehadiran
+      - berapa kali boleh izin kuliah
+      - boleh ga izin 4 kali
+      - boleh izin 4 kalo gak?
+  - intent: faq/absen_kuliah
+    examples: |
+      - bagaimana jika tidak hadir lebih dari batas?
+      - yang dilakukan jika tidak hadir lebih dari 3 kali?
+      - kalau izin 4 kali boleh ikut uas tidak?
+      - bolehkah ikut ujian semester jika izin lebih dari 3 kali?
+  - intent: faq/jumlah_waktu_akademik
+    examples: |
+      - berapa lama waktu akademik per semester?
+      - satu semester berapa minggu?
+  - intent: faq/semester_antara
+    examples: |
+      - apa itu [sp](SP)?
+      - mau tanya [semester antara](SP)
+      - [semester antara](SP) untuk apa?
+      - kapan [sp](SP)?
+      - kapan [semester antara](SP) dibuka?
+      - syarat mengambil [sp](SP)
+      - jelasin [semester antara](SP) dong
+      - [sp](SP) itu apa?
+      - [mata kuliah](MK) yang boleh diambil di [sp](SP)
+      - apa saja [mk](MK) di [sp](SP)
+      - [mk](MK) di [semester antara](SP)
+      - [mata kuliah](MK) di [semester antara](SP) apa aja
+      - [mk](MK) di [semester antara](SP) boleh bebas?
+      - [mata kuliah](MK) yang akan dibuka di [sp](SP)
+      - boleh tidak mengambil [mata kuliah](MK) semester depan di [semester antara](SP)?
+      - boleh tidak ambil [mk](MK) praktikum di [sp](SP)?
+      - boleh tidak cuma mengambil 1 [mata kuliah](MK) di [semester antara](SP)?
+      - apa itu [sp](SP)[sp](SP)
+      - syarat-syarat [semester antara](SP)[semester antara](SP)
+      - ketentuan [semester antara](SP)[semester antara](SP)
+      - apa itu [sp](SP)[sp](SP)
+      - [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
+      - syarat-syarat [semester antara](SP)[semester antara](SP)
+      - ketentuan [semester antara](SP)[semester antara](SP)
+  - intent: faq/mahasiswa_semester_antara
+    examples: |
+      - jumlah mahasiswa satu kelas di semester antara?
+      - minimal jumlah mahasiswa satu kelas di semester antara
+      - berapa mahasiswa di semester antara
+      - kalau satu kelas di semester antara hanya 5 mahasiswa boleh tidak?
+      - jumlah minimal mahasiswa untuk mengambil [semester antara](SP)
+  - intent: faq/durasi_semester_antara
+    examples: |
+      - berapa lama [semester antara](SP)?
+      - [sp](SP) berapa bulan
+      - [sp](SP) berapa lama
+      - [semester antara](SP) berapa minggu
+      - apakah [sp](SP) hanya 1 bulan?
+  - intent: faq/tempat_dan_sistem_perkuliahan
+    examples: |
+      - Bagaimana perkuliahan dilaksanakan?
+      - Dimana perkuliahan dilaksanakan?
+      - Bagaimana sistem perkuliahan dilaksanakan?
+      - Kapan perkuliahan dilaksanakan?
+      - Dimana kita bisa melihat jadwal kuliah?
+      - Dimana kita bisa melihat jadwal perkuliahan?
+      - Dimana kita melihat jadwal kuliah?
+      - Kapan kuliah masuk?
+      - Kapan masuk kuliah?
+      - Kapan kuliah?
+      - Kapan perkuliahan dimulai?
+      - kapan kuliah?
+  - intent: faq/perkuliahan_diluar_jam_kerja
+    examples: |
+      - Bagaimana jika kegiatan akademik yang dilaksanakan di luar jam kerja?
+      - Bagaimana jika kuliah di luar jam kerja?
+      - Gimana kalau kuliah di luar jam kerja?
+      - Bagaimana jika pergantian kuliah bertabrakan dengan [mata kuliah](MK) lain?
+      - perubahan waktu kuliah mengganggu mk lain?
+      - bagaimana kuliah di luar jam kerja?
+  - intent: faq/sistem_e-learning
+    examples: |
+      - Bagaimana sistem perkuliahan di [e-learning](Eler)?
+      - Cara menggunakan [elearning](Eler)?
+      - Bagaimana cara menggunakan [elearning](Eler)?
+      - Cara pelaksanaan [e-learning](Eler)?
+      - Bagaimana sistem perkuliahan daring?
+      - Bagaimana sistem kuliah daring?
+      - Bagaimana sistem perkuliahan online?
+      - Bagaimana sistem kuliah online?
+      - sistem perkuliahan di [e-learning](Eler)[e-learning](Eler)
+      - sistem perkuliahan di [e-learning](Eler)[e-learning](Eler)
+  - intent: faq/perubahan_mata_kuliah
+    examples: |
+      - Apakah mahasiswa bisa mengubah [mata kuliah](MK)?
+      - Apakah [mata kuliah](MK) yang telah di ambil bisa diubah?
+      - Kapan batas waktu mahasiswa dapat mengubah [mata kuliah](MK)?
+      - Kapan terakhir perubahan [matkul](MK) dibuka?
+      - Sampai kapan [mata kuliah](MK) dapat diubah?
+      - Bagaimana sistem perubahan [mk](MK)?
+      - Bagaimana cara merubah [mata kuliah](MK)?
+      - gimana merubah jadwal [mk](MK)[mk](MK)
+      - gimana merubah jadwal [mk](MK)[mk](MK)
+  - intent: faq/kegiatan_akademik_akhir_program
+    examples: |
+      - Bagaimana sistem Kegiatan Akademik Pada Akhir Program ?
+      - Bagaimana sistem Kegiatan Akademik di Akhir Program ?
+      - Apa kegiatan akademik pada akhir program?
+      - Bagaimana sistem Kegiatan Akademik [sarjana](Pendidikan) pada akhir program?
+      - Bagaimana Kegiatan Akademik [profesi](Pendidikan) pada akhir program?
+      - apa kegiatan akademik di akhir program
+      - kegtan akedmik di akhir program
+      - sistem kegiatan akademik di akhir program
+      - kegiatan akedemik di akhir program
+  - intent: faq/masa_studi_akademik
+    examples: |
+      - kapan masa studi dihitung?
+      - kapan masa studi dimulai?
+      - sejak kapan masa studi diihitung?
+      - sejak kapan masa studi dimulai?
+      - kapan masa studi berakhir?
+      - kapan masa studi selesai?
+      - kapan masa studi dihitung selesai?
+      - apakah stop out dihitung masa studi?
+      - apakah SO dihitung masa studi?
+      - apakah stop out terhitung dalam masa studi?
+      - apakah SO terhitung dalam masa studi?
+      - apa kegunaan masa studi akademik?
+      - untuk mahasiswa pindahan apakah masa studi di perguruan tinggi awal dihitung?
+      - kapan masa studi dihitung
+  - intent: faq/masa_studi_administrasi
+    examples: |
+      - apa itu masa studi administrasi?
+      - untuk apa masa studi administrasi?
+      - apa kegunaan masa studi administrasi ?
+      - apa itu masa studi administrasi
+  - intent: faq/beban_studi_sarjana
+    examples: |
+      - bagaimana pembagian beban studi ?
+      - bagaimana pembagian beban studi per semester ?
+      - berapa sks minimal setiap semester?
+      - berapa sks maksimal setiap semester?
+      - berapa sks yang bisa diambil pada semester pertama ?
+      - berapa jumlah sks yang bisa diambil pada semester pertama?
+      - bagaimana menentukan beban studi setiap semester?
+  - intent: faq/pembimbing_akademik
+    examples: |
+      - siapa saja yang didampingi [pembimbing akademik](pa)
+      - apa itu [PA](pa)
+      - [PA](pa) adalah
+      - apa itu dosen [PA](pa)
+      - apa itu dosen [pembimbing akademik](pa)
+      - dosen PA adalah
+  - intent: faq/tugas_pembimbing_akademik
+    examples: |
+      - Tugas [pembimbing akademik](pa) adalah
+      - Apa tugas [pembimbing akademik](pa)
+      - Apakah [pembimbing akademik](pa) memberikan bimbingan non akademik?
+      - Hal apa saja yang menjadi tugas [pembimbing akademik](pa)
+      - Tugas Dosen [PA](pa)
+      - Tugas Dosen Pembimbing Akademik adalah
+      - Tugas – tugas Dosen [PA](pa)
+      - Dosen [PA](pa) bertugas untuk
+      - Apa saja tugas dari [PA](pa)
+      - Apa saja tugas [pembimbing akademik](pa)
+      - tugas [PA](pa)[PA](pa) adalah?
+      - apa saja tugas [pembimbing akademik](pa)[pembimbing akademik](pa)?
+      - tugas [PA](pa)[PA](pa) adalah?
+  - intent: faq/kewajiban_pembimbing_akademik
+    examples: |
+      - Apa kewajiban [pembimbing akademik](pa)
+      - Hal apa yang harus dilakukan [pembimbing akademik](pa)
+      - Dosen [PA](pa) berkawajiban untuk
+      - Hal yang harus dilakukan Dosen [PA](pa)
+      - Kewajiban Dosen PA](pa)
+      - Kewajiban Dosen [pembimbing akademik](pa)
+      - kewajiban [pa](pa)[pa](pa)
+      - kewajiban dosen
+      - kewajiban [pa](pa)[pa](pa)
+  - intent: faq/hak_pa
+    examples: |
+      - apa hak [pembimbing akademik](pa)
+      - hak [PA](pa)
+      - apa hak [PA](pa)
+      - [PA](pa) memiliki hak apa
+      - hak apa yang dimiliki [PA](pa)
+      - apa hak [PA](pa) atas mahasiswa
+      - [PA](pa) punya hak apa atas mahasiswa
+      - hak [pembimbing akademik](pa)
+      - [pembimbing akademik](pa) memiliki hak apa
+      - hak apa yang dimiliki [pembimbing akademik](pa)
+      - apa hak [pembimbing akademik](pa) atas mahasiswa
+      - [pembimbing akademik](pa) punya hak apa atas mahasiswa
+      - hak dosen [pa](pa)
+      - hak [pa](pa)[pa](pa) apa
+      - hak [pa](pa)[pa](pa)
+      - hak [pembimbing akademik](pa)[pembimbing akademik](pa) apa
+      - apa hak [pa](pa)[pa](pa)
+      - hak [pa](pa)[pa](pa)
+      - hak [pa](pa)[pa](pa) apa
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - halo
+      - Hi
+      - Hallo
+      - hallo
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: faq/mk_semester_antara
+    examples: |
+      - [mata kuliah](MK)[mata kuliah](MK)  yang boleh diambil di [semester antara](SP)[semester antara](SP)
+      - ketentuan [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
+      - [mata kuliah](MK)[mata kuliah](MK) di [semester antara](SP)[semester antara](SP)
+      - [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
+      - [mata kuliah](MK)[mata kuliah](MK)  yang boleh diambil di [semester antara](SP)[semester antara](SP)
+      - ketentuan [mk](MK)[mk](MK) [semester antara](SP)[semester antara](SP)
+      - [mata kuliah](MK)[mata kuliah](MK) di [semester antara](SP)[semester antara](SP)
+  - intent: faq/beban_masa_studi_minimal_diploma
+    examples: |
+      - berapa lama masa studi d3?
+      - berapa lama masa studi diploma tiga?
+      - berapa lama masa studi d3 paling lambat?
+      - masa studi d3 paling lambat?
+      - berapa lama masa studi diploma tiga paling lambat?
+      - masa studi diploma tiga paling lambat ?
+      - berapa banyak minimal sks d3?
+      - berapa minimal sks diploma tiga?
+      - berapa minimal sks d3?
+      - berapa banyak minimal sks diploma tiga?
+  - intent: faq/beban_masa_studi_minimal_sarjana
+    examples: |
+      - berapa lama masa studi s1?
+      - berapa lama masa studi sarjana?
+      - berapa lama masa studi s1 paling lambat?
+      - masa studi s1 paling lambat?
+      - berapa lama masa studi sarjana paling lambat?
+      - masa studi sarjana paling lambat ?
+      - berapa banyak minimal sks s1?
+      - berapa minimal sks sarjana?
+      - berapa minimal sks s1?
+      - berapa banyak minimal sks sarjana?
+  - intent: faq/beban_masa_studi_minimal_profesi
+    examples: |
+      - berapa lama masa studi profesi?
+      - berapa lama masa studi profesi paling lambat?
+      - masa studi profesi paling lambat?
+      - berapa banyak minimal sks profesi?
+      - berapa minimal sks profesi?
+  - intent: faq/beban_masa_studi_minimal_Magister
+    examples: |
+      - berapa lama masa studi s2?
+      - berapa lama masa studi s2 paling lambat?
+      - masa studi s2 paling lambat?
+      - berapa lama masa studi Magister?
+      - berapa lama masa studi Magister paling lambat?
+      - masa studi Magister paling lambat?
+      - berapa banyak minimal sks s2?
+      - berapa minimal sks magister?
+      - berapa minimal sks s2?
+      - berapa banyak minimal sks magister?
+  - intent: faq/beban_masa_studi_minimal_spesialis
+    examples: |
+      - berapa lama masa studi spesialis?
+      - berapa lama masa studi spesialis paling lambat?
+      - masa studi spesialis paling lambat ?
+      - berapa minimal sks spesialis?
+      - berapa banyak minimal sks spesialis?
+  - intent: faq/beban_masa_studi_minimal_doktor
+    examples: |
+      - berapa lama masa studi s3 ?
+      - berapa lama masa studi s3 paling lambat?
+      - masa studi s3 paling lambat?
+      - berapa lama masa studi doktor?
+      - berapa lama masa studi doktor paling lambat?
+      - masa studi doktor paling lambat?
+      - berapa banyak minimal sks s3?
+      - berapa minimal sks doktor?
+      - berapa minimal sks s3?
+      - berapa banyak minimal sks doktor?
+  - intent: faq/beban_masa_studi_minimal_subspeasialis
+    examples: |
+      - berapa lama masa studi subspesialis?
+      - berapa lama masa studi subspesialis paling lambat?
+      - masa studi subspesialis paling lambat ?
+      - berapa minimal sks subspesialis?
+      - berapa banyak minimal sks subspesialis?
+  - intent: faq/tugas_akhir_subtansi
+    examples: |
+      - apa saja substansi tugas akhir setiap program pendidikan ?
+      - setiap program pendidikan substansi tugas akhirnya apa saja ?
+      - apa saja substansi tugas akhir setiap program ?
+      - setiap program pendidikan substansi tugas akhirnya apa aja ?
+      - apa saja tugas akhir setiap program pendidikan ?
+      - apa saja tugas akhir setiap program ?
+      - setiap program pendidikan tugas akhirnya apa aja ?
+      - setiap program pendidikan tugas akhirnya apa saja ?
+      - tugas akhir setiap program pendidikan apa aja ?
+      - tugas akhir setiap program pendidikan apa saja ?
+      - tugas akhir apa aja ?
+      - tugas akhir apa ?
+      - tugas akhir ?
+  - intent: faq/peraturan_substansi
+    examples: |
+      - aturan mengenai substansi tugas akhir ?
+      - aturan mengenai tugas akhir ?
+      - tugas akhir diatur dalam ?
+      - tugas akhir diatur pada ?
+  - intent: faq/waktu_persiapan_tugasAkhir
+    examples: |
+      - kapan persiapan tugas akhir ?
+      - kapan persiapan pelaksanaan tugas akhir ?
+      - tugas akhir persiapannya kapan ?
+      - tugas akhir persiapan pelaksanaan nya kapan ?
+      - persiapan tugas akhir ?
+      - persiapan pelaksanaan tugas akhir ?
+      - waktu persiapan pelaksanaan tugas akhir ?
+      - waktu persiapan tugas akhir ?
+  - intent: faq/level9_KNNI
+    examples: |
+      - apa level 9 knni ?
+      - apa level sembilan knni ?
+      - apa level knni program doktor ?
+      - apa level knni program s3 ?
+      - apa level knni doktor ?
+      - apa level knni s3 ?
+      - level 9 knni ?
+      - level sembilan knni ?
+      - level knni program doktor ?
+      - level knni program s3 ?
+      - level knni doktor ?
+      - level knni s3 ?
+      - knni program doktor ?
+      - knni program s3 ?
+      - knni s3 ?
+      - knn1 level 9 ?
+  - intent: faq/level8_KNNI
+    examples: |
+      - apa level 8 knni ?
+      - apa level delapan knni ?
+      - apa level knni program magister ?
+      - apa level knni program s2 ?
+      - apa level knni magister ?
+      - apa level knni s2 ?
+      - level 8 knni ?
+      - level delapan knni ?
+      - level knni program magister ?
+      - level knni program s2 ?
+      - level knni magister ?
+      - level knni s2 ?
+      - knni program magister ?
+      - knni program s2 ?
+      - knni s2 ?
+      - knn1 level 8 ?
+  - intent: faq/level7_KNNI
+    examples: |
+      - apa level 7 knni ?
+      - apa level tujuh knni ?
+      - apa level knni program profesi dan spesialis ?
+      - apa level knni program spesialis ?
+      - apa level knni program profesi ?
+      - apa level knni profesi dan spesialis ?
+      - apa level knni spesialis ?
+      - apa level knni profesi ?
+      - level 7 knni ?
+      - level tujuh knni ?
+      - level knni program profesi dan spesialis ?
+      - level knni program spesialis ?
+      - level knni program profesi ?
+      - level knni profesi dan spesialis ?
+      - level knni profesi ?
+      - level knni spesialis ?
+      - knni program profesi dan spesialis ?
+      - knni program spesialis ?
+      - knni program profesi ?
+      - knni level 7 ?
+  - intent: faq/level6_KNNI
+    examples: |
+      - apa level 6 knni ?
+      - apa level enam knni ?
+      - apa level knni program sarjana ?
+      - apa level knni program s1 ?
+      - apa level knni sarjana ?
+      - apa level knni s1 ?
+      - level 6 knni ?
+      - level enam knni ?
+      - level knni program sarjana ?
+      - level knni program s1 ?
+      - level knni sarjana ?
+      - level knni s1 ?
+      - knni program sarjana ?
+      - knni program s1 ?
+      - knni s1 ?
+      - knn1 level 6 ?
+  - intent: faq/level_KNNI
+    examples: |
+      - apa aja level knni ?
+      - apa saja level knni ?
+      - knni level nya apa aja ?
+      - knni level nya apa saja ?
+      - apa aja level-level knni ?
+      - apa saja level-level knni ?
+      - knni level-level nya apa aja ?
+      - knni level-level nya apa saja ?
+      - level knni ?
+      - level-level knni ?
+      - level knni setiap program apa aja ?
+      - level knni setiap program pendidikan apa aja ?
+      - level knni setiap program apa saja ?
+      - level knni setiap program pendidikan apa saja ?
+      - level knni setiap program ?
+      - level knni setiap program pendidikan ?
+      - level-level knni setiap program apa aja ?
+      - level-level knni setiap program pendidikan apa aja ?
+      - level-level knni setiap program apa saja ?
+      - level-level knni setiap program pendidikan apa saja ?
+      - level-level knni setiap program ?
+      - level-level knni setiap program pendidikan ?
+      - knni setiap program pendidikan ?
+      - knni setiap program ?
+      - knni ?
+  - intent: faq/substansi_Diploma
+    examples: |
+      - apa substansi tugas akhir diploma ?
+      - apa substansi tugas akhir diploma tiga?
+      - apa substansi tugas akhir diploma 3 ?
+      - apa substansi tugas akhir program diploma ?
+      - apa substansi tugas akhir program diploma tiga ?
+      - apa substansi tugas akhir program diploma 3 ?
+      - apa substansi tugas akhir d3 ?
+      - apa substansi tugas akhir program d3 ?
+      - apa tugas akhir diploma ?
+      - apa tugas akhir diploma tiga ?
+      - apa tugas akhir diploma 3 ?
+      - apa tugas akhir program diploma ?
+      - apa tugas akhir program diploma tiga ?
+      - apa tugas akhir program diploma 3?
+      - apa tugas akhir d3 ?
+      - apa tugas akhir program d3 ?
+      - tugas akhir diploma apa ?
+      - tugas akhir diploma tiga apa ?
+      - tugas akhir diploma 3 apa ?
+      - tugas akhir diploma ?
+      - tugas akhir diploma tiga ?
+      - tugas akhir diploma 3 ?
+      - tugas akhir program diploma apa ?
+      - tugas akhir program diploma tiga apa ?
+      - tugas akhir program diploma 3 apa ?
+      - tugas akhir program diploma ?
+      - tugas akhir program diploma 3 ?
+      - tugas akhir program diploma tiga ?
+      - tugas akhir d3 apa ?
+      - tugas akhir d3 ?
+      - tugas akhir program d3 apa ?
+      - tugas akhir program d3 ?
+      - apa tugas akhir d3
+  - intent: faq/substansi_Sarjana
+    examples: |
+      - apa substansi tugas akhir sarjana ?
+      - apa substansi tugas akhir program sarjana ?
+      - apa substansi tugas akhir s1 ?
+      - apa substansi tugas akhir program s1 ?
+      - apa tugas akhir sarjana ?
+      - apa tugas akhir program sarjana ?
+      - apa tugas akhir s1 ?
+      - apa tugas akhir program s1 ?
+      - tugas akhir sarjana apa ?
+      - tugas akhir sarjana ?
+      - tugas akhir program sarjana apa ?
+      - tugas akhir program sarjana ?
+      - tugas akhir s1 apa ?
+      - tugas akhir s1 ?
+      - tugas akhir program s1 apa ?
+      - tugas akhir program s1 ?
+  - intent: faq/substansi_Magister
+    examples: |
+      - apa substansi tugas akhir magister ?
+      - apa substansi tugas akhir program magister ?
+      - apa substansi tugas akhir s2 ?
+      - apa substansi tugas akhir program s2 ?
+      - apa tugas akhir magister ?
+      - apa tugas akhir program magister ?
+      - apa tugas akhir s2 ?
+      - apa tugas akhir program s2 ?
+      - tugas akhir magister apa ?
+      - tugas akhir magister ?
+      - tugas akhir program magister apa ?
+      - tugas akhir program magister ?
+      - tugas akhir s2 apa ?
+      - tugas akhir s2 ?
+      - tugas akhir program s2 apa ?
+      - tugas akhir program s2 ?
+  - intent: faq/substansi_Doktor
+    examples: |
+      - apa substansi tugas akhir doktor ?
+      - apa substansi tugas akhir program doktor ?
+      - apa substansi tugas akhir s3 ?
+      - apa substansi tugas akhir program s3 ?
+      - apa tugas akhir doktor ?
+      - apa tugas akhir program doktor ?
+      - apa tugas akhir s3 ?
+      - apa tugas akhir program s3 ?
+      - tugas akhir doktor apa ?
+      - tugas akhir dokor ?
+      - tugas akhir program doktor apa ?
+      - tugas akhir program doktor ?
+      - tugas akhir s3 apa ?
+      - tugas akhir s3 ?
+      - tugas akhir program s3 apa ?
+      - tugas akhir program s3 ?
+  - lookup: univ
+    examples: |
+      - universitas sriwijaya
+      - unsri
+  - lookup: belajar
+    examples: |
+      - pembelajaran
+      - belajar
+  - lookup: SP
+    examples: |
+      - semester antara
+      - semester pendek
+      - sp
+  - lookup: MK
+    examples: |
+      - mata kuliah
+      - mk
+      - matkul
+  - lookup: Eler
+    examples: |
+      - e-learning
+      - elearning
+  - lookup: Pendidikan
+    examples: |
+      - diploma
+      - sarjana
+      - spesialis
+      - magister
+      - doktor
+      - profesi
+  - lookup: pa
+    examples: |
+      - PA
+      - pembimbing akademik
+  - lookup: materi
+    examples: |
+      - suasana dan kegiatan akademik
+      - syarat mengikuti kegiatan akademik
+      - frekuensi kegiatan akademik
+      - semester anatara
+      - suasana dan kegiatan akademik
+      - syarat mengikuti kegiatan akademik
+      - frekuensi kegiatan akademik
+      - semester antara
+      - tempat dan sistem pelaksanaan perkuliahan
+      - perubahan mata kuliah
+      - kegiatan akademik pada akhir program
+      - status kemahasiswaan
+      - beban dan masa studi
+      - beban dan masa studi berdasarkan jenjang akademik
+      - beban studi per semester program sarjana
+      - pembimbing akademik
+      - tugas pembimbing akademik
+      - kewajiban pembimbing akademik
+      - hak pembimbing akademik
+      - substansi tugas akhir
+      - pelaksanaan dan pembimbingan tugas akhir

@@ -33,7 +33,7 @@ class ActionCheckKnowledge(Action):
                         text=f"Ya, kamu bisa bertanya mengenai {materi}.")
                 else:
                     dispatcher.utter_message(
-                        text=f"Maaf saya tidak tahu mengenai {materi}.")
+                        text=f"Maaf saya tidak tahu mengenai {materi}, coba cek lagi pengejaan yang benar.")
         return []
 
 
