@@ -1,0 +1,266 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- faq:
+    use_entities: true
+- give_name:
+    use_entities: true
+- challenge_knowledge:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- feedback_give:
+    use_entities: true
+entities:
+- materi
+- name
+- univ
+- belajar
+- MK
+- SP
+- Eler
+- Pendidikan
+- pa
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a FAQ bot.
+  utter_askname:
+  - text: siapa nama anda?
+  utter_faq/substansi_Doktor:
+  - text: Bagi Program Doktor, Disertasi merupakan laporan hasil pelaksanaan kegiatan pembelajaran penelitian, pengembangan ataupun perancangan yang didasarkan terutama pada data primer yang diperoleh, diolah, dianalisis menggunakan pendekatan multi, inter, dan intradisiplin ilmu untuk menghasilkan kebaruan (novelty) dalam bidang ilmu, pengetahuan dan atau teknologi yang ditekuninya. Dalam pelaksanaan penelitian ini, mahasiswa program doktor memperoleh pengalaman merencanakan dan memimpin penelitian, mengelola data sesuai standar pengelolaan data ilmiah untuk mencegah pelanggaran etika akademik seperti plagiasi, fasilifikasi data, dan fabrikasi data.
+  utter_faq/substansi_Magister:
+  - text: Bagi Program Magister, Tesis merupakan laporan pelaksanaan kegiatan pembelajaran penelitian, pengembangan ataupun perancangan yang didasarkan pada perolehan, pengolahan dan analisis data primer yang dilakukan menggunakan pendekatan dan metode ilmiah. Data primer dapat diperkuat oleh data sekunder. Data diolah, dianalisis dan dikelola secara ilmiah menggunakan pendekatan multi dan interdisiplin. Mahasiswa menggunakan pengalaman penelitiannya dan kesimpulan penelitiannya dimanfaatkan untuk mengembangkan ilmu, pengetahuan dan atau teknologi. Selama pelaksanaan tugas akhir ini, mahasiswa program magister dipastikan mampu menjaga karyanya dari kecurangan akademik berupa plagiasi, fasilifikasi data, dan atau fabrikasi data.
+  utter_faq/substansi_Sarjana:
+  - text: Bagi Program Sarjana, Skripsi adalah laporan pelaksanaan kegiatan pembelajaran penelitian, pengembangan ataupun perancangan dan atau pengabdian kepada masyarakat. Tujuan tugas akhir program sarjana adalah memberikan pengalaman belajar (academic exercise) kepada mahasiswa agar mahasiswa berpikir logis, ilmiah, kritis, inovatif, dan kreatif berbasis data dalam menyelesaikan masalah sederhana pada bidang studinya. Data yang digunakan dapat berupa data primer dan atau data sekunder, baik data kuantitatif dan atau kualitatif yang diolah dan dianalisis menggunakan pendekatan dan metode ilmiah. Selama pelaksanaan tugas akhir, mahasiswa program sarjana juga belajar dan dilatih untuk menjaga karyanya dari kecurangan akademik berupa plagiasi, fasilifikasi data, dan atau fabrikasi data.
+  utter_faq/substansi_Diploma:
+  - text: Bagi program diploma tiga, substansi tugas akhir merupakan proyek akhir dan tidak berbentuk penelitian, pengembangan ataupun perancangan.
+  utter_faq/level_KNNI:
+  - text: |-
+      Level-level KNNI : 
+      1 tugas akhir program sarjana (level 6 KNNI),
+      2 tugas akhir program profesi dan spesialis (level 7 KNNI),
+      3 tugas akhir program magister (level 8 KNNI), dan
+      4 tugas akhir program doktor (level 9 KNNI).
+  utter_faq/level6_KNNI:
+  - text: |-
+      Keluasan dan kedalaman Tugas Akhir program sarjana untuk bentuk pembelajaran penelitian, pengembangan ataupun perancangan dan atau pengabdian kepada masyarakat bertujuan untuk memberikan pengalaman belajar kepada mahasiswa agar mampu mengaplikasikan dan memanfaatkan ilmu, pengetahuan, teknologi, dan atau seni pada bidang keahliannya setara dengan level 6 (enam) KKNI, yaitu untuk:
+      a. penyelesaian masalah prosedural dan beradaptasi terhadap situasi yang dihadapi;
+      b. mengambil keputusan yang tepat berdasarkan analisis informasi dan data; dan
+      c. memberi petunjuk dalam memilih berbagai alternatif solusi secara mandiri atau berkelompok.
+  utter_faq/level7_KNNI:
+  - text: |-
+      Keluasan dan kedalaman tugas akhir program profesi dan spesialis untuk bentuk pembelajaran penelitian, pengembangan ataupun perancangan dan atau pengabdian kepada masyarakat bertujuan untuk memberikan pengalaman belajar kepada mahasiswa agar mampu memanfaatkan ilmu pengetahuan, teknologi, dan/atau seni setara level 7 (tujuh) KKNI, yaitu untuk:
+      a. merencanakan dan mengelola sumberdaya di bawah tanggungjawabnya, dan mengevaluasi secara komprehensif kerjanya;
+      b. menghasilkan langkah-langkah pengembangan strategis organisasi;
+      c. memecahkan permasalahan ilmu pengetahuan, teknologi, dan/atau seni di dalam bidang keilmuannya melalui pendekatan monodisipliner;
+      d. mengelola riset dan pengembangan yang bermanfaat bagi masyarakat dan keilmuan, serta mampu mendapat pengakuan nasional dan internasional.
+  utter_faq/level8_KNNI:
+  - text: |-
+      Keluasan dan kedalaman tugas akhir program magister bertujuan memberi pengalaman belajar Mahasiswa agar mampu menggunakan pendekatan inter atau multidisplin, setara level 8 (delapan) KKNI, yaitu untuk:
+      a. menyelesaikan masalah ilmu pengetahuan, teknologi dan atau seni dalam bidang keilmuannya;
+      b. mengembangkan pengetahuan, teknologi dan atau seni dalam bidang keilmuan atau praktik profesionalnya hingga menghasilkan karya intelektual yang inovatif dan teruji; dan
+      c. mengelola riset dan pengembangan yang bermanfaat bagi masyarakat dan keilmuannya yang diakui secara nasional dan internasional.
+  utter_faq/level9_KNNI:
+  - text: |-
+      Keluasan dan kedalaman tugas akhir program doktor bertujuan memberi pengalaman belajar kepada Mahasiswa agar mampu menggunakan pendekatan inter, multi, dan transdisipliner, setara level 9 (delapan) KKNI, yaitu untuk:
+      a. menyelesaikan masalah ilmu, pengetahuan teknologi, dan atau seni dalam bidang keilmuannya;
+      b. mengembangkan pengetahuan, teknologi dan seni untuk menghasilkan karya intelektual yang kreatif, original dan teruji dalam bidang keilmuannya melalui riset; dan
+      c. mengelola, memimpin, dan mengembangkan riset dan pengembangan yang bermanfaat bagi kemaslahatan umat manusia yang diakui nasional dan internasional.
+  utter_faq/waktu_persiapan_tugasAkhir:
+  - text: |-
+      Persiapan pelaksanaan kegiatan akademik pada akhir program dapat mulai dilakukan paling cepat semester 4 untuk proyek akhir program diploma tiga, semester lima untuk skripsi program sarjana, dan semester pertama untuk tesis program magister dan disertasi program doktor.
+      Bagi program diploma tiga dan program sarjana, penyiapan data dapat dilakukan lebih awal apabila terlibat atau ikut serta dalam penelitian dosen Universitas Sriwijaya, dengan kesepakatan bahwa sebagian data penelitian dosen digunakan untuk penelitian mahasiswa program diploma tiga atau program sarjana. Kesepakatan ini dilakukan oleh dosen peneliti dan mahasiswa yang terlibat. Dosen peneliti dapat diusulkan sekaligus menjadi pembimbing tugas akhir mahasiswa yang terlibat. Pelaksanaan kegiatan pada tahap awal ini tidak diberi bobot sks dan akan diperhitungkan/dimasukkan dalam bobot sks proyek akhir mahasiswa program diploma tiga atau skripsi mahasiswa program sarjana. Sebelum mulai dilaksanakan, kegiatan penelitian dan kesepakatan bersama ini harus dilaporkan kepada Koordinator Program Studi agar terdokumentasi dan kegiatan ini melembaga.
+  utter_faq/peraturan_substansi:
+  - text: Substansi Tugas Akhir untuk setiap program pendidikan disesuaikan dengan jenjang KKNI yang berlaku. Sesuai Peraturan Rektor Nomor 5 Tahun 2020 tentang Standar Pendidikan Universitas Sriwijaya yang mengacu pada SN-Dikti, program sarjana, magister, doktor, spesialis, dan profesi harus melaksanakan bentuk pembelajaran berupa penelitian, pengembangan, atau perancangan. Program sarjana,program profesi dan program spesialis harus juga melaksanakan bentuk pembelajaran pengabdian kepada masyarakat.
+  utter_faq/tugas_akhir_subtansi:
+  - text: |-
+      - Bagi program diploma tiga, substansi tugas akhir merupakan proyek akhir dan tidak berbentuk penelitian, pengembangan ataupun perancangan.
+      - Bagi Program Sarjana, Skripsi adalah laporan pelaksanaan kegiatan pembelajaran penelitian, pengembangan ataupun perancangan dan atau pengabdian kepada masyarakat.
+      - Bagi Program Magister, Tesis merupakan laporan pelaksanaan kegiatan pembelajaran penelitian, pengembangan ataupun perancangan yang didasarkan pada perolehan, pengolahan dan analisis data primer yang dilakukan menggunakan pendekatan dan metode ilmiah.
+      - Bagi Program Doktor, Disertasi merupakan laporan hasil pelaksanaan kegiatan pembelajaran penelitian, pengembangan ataupun perancangan yang didasarkan terutama pada data primer yang diperoleh, diolah, dianalisis menggunakan pendekatan multi, inter, dan intradisiplin ilmu untuk menghasilkan kebaruan (novelty) dalam bidang ilmu, pengetahuan dan atau teknologi yang ditekuninya.
+  utter_faq/beban_masa_studi_minimal_diploma:
+  - text: |-
+      minimal sks: 108
+      masa studi: 5-8 semester
+  utter_faq/beban_masa_studi_minimal_sarjana:
+  - text: |-
+      minimal sks: 144
+      masa studi: 7-10 semester
+  utter_faq/beban_masa_studi_minimal_profesi:
+  - text: |-
+      minimal sks: 24
+      masa studi: 3-6 semester
+  utter_faq/beban_masa_studi_minimal_magister:
+  - text: |-
+      minimal sks: 36
+      masa studi: 3-8 semester
+  utter_faq/beban_masa_studi_minimal_spesialis:
+  - text: |-
+      minimal sks: 36
+      masa studi: 3-8 semester
+  utter_faq/beban_masa_studi_minimal_doktor:
+  - text: |-
+      minimal sks: 42
+      masa studi: 4-10 semester
+  utter_faq/beban_masa_studi_minimal_subspeasialis:
+  - text: |-
+      minimal sks: 42
+      masa studi: 4-10 semester
+  utter_faq/kewajiban_pembimbing_akademik:
+  - text: |-
+      1. Memastikan bahwa mahasiswa bimbingannya dapat menyelesaikan studi sesuai rencana dan atau memitigasi kendala serius yang dihadapi mahasiswa, yang berpotensi menghambat penyelesaian studinya.
+      2. Membimbing Akademim didistribusikan oleh prodi secara proportional dengan ketentuan Dosen sebagai PA mahasiswa sebanyak-banyaknya 20 orang mahasiswa, dari semua jenjang, setiap semester. Dalam kondisi jumlah dosen terbatas, maka jumlah pembimbingan boleh lebih dari 20 orang. Apabila suatu prodi membebankan dosen untuk menjadi Pembimbing Akademik lebih dari 20 orang dan maksimum 30 orang, Dekan melaporkannya kepada Rektor secara tertulis.
+      3. Memantau perkembangan studi mahasiswa bimbingannya pada setiap semester secara langsung atau melalui akun simak online yang telah dimiliki oleh masing-masing pembimbing akademik untuk menghindari terjadinya putus studi (Drop Out).
+      4. Melaksanakan bimbingan terjadwal bersama mahasiswa bimbingannya paling sedikit 3 (tiga) kali dalam setiap semester.
+      5. Mempelajari masalah akademik, personal, dan sosial mahasiswa bimbingannya.
+      6. Mendiskusikan hasil dan menyetujui rencana studi mahasiswa bimbingannya pada setiap awal semester baik secara langsung maupun secara on-line.
+      7. Menandatangani printout Kartu Studi Mahasiswa (KSM) atau Kartu Pengganti Studi Mahasiswa (KPSM).
+      8. Melaporkan proses dan hasil bimbingan secara tertulis kepada koordinator program studi pada akhir semester dengan cakupan laporan antara lain: kemajuan belajar mahasiswa (jumlah sks dan IPK hingga semester terakhir masa pelaporan), kendala belajar mahasiswa (jika ada), rencana pelaksanaan studi mahasiswa pada semester berikutnya; dan catatan khusus yang perlu diperhatikan (jika ada).
+  utter_faq/tugas_pembimbing_akademik:
+  - text: |-
+      1. Membantu, membimbing, dan memotivasi mahasiswa agar berhasil menyelesaikan studinya tepat waktu.
+      2. Membantu mahasiswa bimbingannya untuk mengenali minat, bakat dan kemampuan akademik mahasiswa tersebut. 
+      3. Membimbing mahasiswa untuk berkelakuan baik sesuai norma agama, nilai-nilai sosial budaya masyarakat, dan menjunjung tinggi etika akademik.
+      4. Menanamkan nilai-nilai moral dan spiritual agar mahasiswa bimbingannya berkarakter dan memiliki ahlak mulia.
+      5. Memberikan nasihat dan pandangan kepada mahasiswa bimbingannya dalam menghadapi kendala akademik, sosial kemasyarakatan, dan ekonomi serta membantu menemukan solusi pemecahan masalah tersebut. 
+      6. Memfasilitasi mahasiswa bimbingannya dalam merencanakan studinya, termasuk menentukan pilihan mata kuliah yang akan diikutinya setiap semester.
+  utter_faq/hak_pa:
+  - text: |-
+      1. Diutamakan menjadi pembimbing pelaksanaan tugas akhir termasuk dalam penyusunan skripsi mahasiswa bimbingannya.
+      2. Dalam penyusunan tesis dan disertasi, dosen PA dipertimbangkan terlibat sebagai pembimbing atau tim promotor sesuai dengan relevansi bidang keilmuannya.
+      3. Menyampaikan masukan, nasehat, bimbingan dan berbagai bentuk pembinaan dan pembimbingan kepada mahasiswa bimbingnya dalam koridor tata cara akademik serta perilaku sosial yang wajar.
+      4. Mendapat pengakuan beban kerja dan atau imbalan kinerja sesuai ketentuan peraturan perundang-undangan.
+  utter_faq/pembimbing_akademik:
+  - text: Selama mengikuti pendidikan, mahasiswa Program Diploma Tiga, Sarjana, Profesi, Magister,Spesialis dan Subspesialis serta Doktor didampingi oleh seorang dosen Pembimbing Akademik (PA), yang ditetapkan oleh Fakultas/Program berdasarkan usulan dari jurusan/bagian/program studi. Dosen PA bertugas tidak terbatas hanya memberikan bimbingan/nasihat akademik tetapi juga non akademik kepada mahasiswa bimbingannya.
+  utter_faq/beban_studi_sarjana:
+  - text: |-
+      Besaran beban studi per semester untuk program sarjana, secara umum adalah sebagai berikut:
+      1. Beban studi yang harus diambil oleh mahasiswa baru pada semester pertama dan kedua maksimum 20 sks.
+      2. Beban studi yang dapat diambil untuk semester berikutnya ditentukan oleh Indeks Prestasi Semester (IPS) sebelumnya, dengan ketentuan sebagai berikut:
+        1) IPS ≥ 3,00 maksimal sebanyak 24 sks.
+        2) IPS 2,50 s.d. 2,99 maksimal sebanyak 21 sks.
+        3) IPS 2,00 s.d. 2,49 maksimal sebanyak 18 sks.
+        4) IPS 1,50 s.d. 1,99 maksimal sebanyak 15 sks.
+        5) IPS< 1,50 maksimal sebanyak 12 sks.
+      3. Jumlah beban studi pada semester genap dan semester antara untuk mata kuliah yang pertama kali diambil mahasiswa maksimum 24 (dua puluh empat) sks.
+      4. Jumlah beban studi pada program magister dan doktor maksimum 12 (dua belas) sks per semester.
+      5. Khusus untuk Fakultas Fakultas yang menerapkan sistem blok, beban studi disusun sesuai dengan ketentuan yang ditetapkan oleh Rektor atas usulan Dekan.
+  utter_faq/masa_studi_administrasi:
+  - text: Masa studi administrasi adalah masa studi yang digunakan untuk kepentingan pengelolaan pendidikan tinggi di Universitas Sriwijaya, seperti untuk kepentingan akreditasi dan atau evaluasi sistem pendidikan di Universitas Sriwijaya. Masa studi ini merupakan rerata dari seluruh masa studi mahasiswa pada periode tertentu dibagi dengan jumlah mahasiswa program yang sama yang lulus pada periode tersebut. Satuan masa studi administrasi dapat dinyatakan dalam semester, tahun, dan atau bulan.
+  utter_faq/masa_studi_akademik:
+  - text: Masa studi akademik mahasiswa pada program studi yang diikutinya dihitung dalam satuan semester, dimulai pada semester saat mahasiswa tersebut diterima di Universitas Sriwijaya dan berakhir pada semester ketika mahasiswa dinyatakan lulus pada suatu yudisium. Masa studi menghitung masa cuti kuliah (stop out) yang diambil mahasiswa. Bagi mahasiswa pindahan, masa studi juga menghitung masa studi di perguruan tinggi asal. Masa studi akademik digunakan untuk penentuan pemberian predikat kelulusan
+  utter_faq/status_kemahasiswaan:
+  - text: |-
+      Penetapan status sebagai mahasiswa aktif Universitas Sriwijaya apabila memenuhi persyaratan-persyaratan sebagai berikut:
+      1. Terdaftar sebagai mahasiswa Universitas Sriwijaya;
+      2. Membayar biaya pendidikan sesuai dengan ketentuan dan pada waktu dan dengan cara yang ditetapkan;
+      3. Tidak dalam masa berhenti sementara (stop out), atau skorsing;
+      4. Mengisi Kartu Studi Mahasiswa (KSM) secara online untuk semester yang ditempuh dan menyerahkan print out ke Fakultas/Program dan prodi masing-masing setelah ditandatangani dosen PA;
+      5. Mengikuti kegiatan akademik sesuai KSM yang ditetapkan;
+      6. Bebas dari narkoba/napza, tindakan kriminal/perbuatan melawan hukum, asusila, indisipliner, keonaran dan atau anarkisme di dalam maupun di luar kampus.
+  utter_faq/kegiatan_akademik_akhir_program:
+  - text: |-
+      Bagi program pendidikan sarjana, program profesi, program magister, program spesialis, dan program doktor bentuk pembelajarannya wajib ditambah berupa bentuk pembelajaran penelitian, perancangan, atau pengembangan sesuai dengan karakteristik bidang ilmu dan atau keahlian. Kegiatan pembelajaran ini di bawah bimbingan dosen dalam rangka pengembangan sikap, pengetahuan, keterampilan, dan pengalaman otentik mahasiswa serta meningkatkan kesejahteraan masyarakat dan daya saing bangsa.
+      Bagi program sarjana, program profesi, dan program spesialis wajib ditambah bentuk pembelajaran berupa pengabdian kepada masyarakat. Kegiatan ini merupakan kegiatan mahasiswa di bawah bimbingan dosen dalam rangka memanfaatkan ilmu pengetahuan dan teknologi untuk memajukan kesejahteraan masyarakat dan mencerdaskan kehidupan bangsa.
+  utter_faq/perubahan_mata_kuliah:
+  - text: Mahasiswa dapat mengubah mata kuliah yang telah tercantum dalam KSM dengan mata kuliah lain paling lambat 2 (dua) minggu untuk semester ganjil dan genap, atau paling lambat 1 (satu) minggu untuk semester antara setelah perkuliahan dimulai. Perubahan ini dilakukan dengan mengisi dan mengganti mata kuliah yang diambil dan dibatalkan secara online. Mata kuliah yang dibatalkan atau diganti oleh mahasiswa harus mendapatkan persetujuan dari Penasehat Akademik (PA).
+  utter_faq/sistem_e-learning:
+  - text: Kegiatan perkuliahan yang dilaksanakan secara e-learning berbentuk dokumen, penugasan, diskusi daring, kuliah online atau video conference menggunakan fasilitas teknologi informasi dan komunikasi (TIK). Dalam kondisi khusus, kegiatan perkuliahan dapat dilakukan sepenuhnya dengan e-learning atas persetujuan dan atau penetapan Rektor.
+  utter_faq/perkuliahan_diluar_jam_kerja:
+  - text: Kegiatan akademik yang dilaksanakan di luar jam kerja dan tempat pembelajaran yang ditetapkan serta dilaporkan ke koordinator program studi. Perubahan waktu dan tempat pelaksanaan perkuliahan tidak boleh mengganggu jadwal dan tempat mata kuliah lain yang telah ditetapkan sebelumnya.
+  utter_faq/tempat_dan_sistem_perkuliahan:
+  - text: Kegiatan perkuliahan dilakukan pada waktu dan tempat yang ditentukan sesuai dengan jadwal perkuliahan yang ditetapkan oleh pimpinan Fakultas/Program sesuai Kalender Akademik Universitas Sriwijaya untuk tahun akademik berjalan.
+  utter_faq/durasi_semester_antara:
+  - text: Semester Antara dilaksanakan selama paling sedikit 8 (delapan) minggu, dengan beban belajar mahasiswa paling banyak 9 (sembilan) satuan kredit semester; Jika semester antara diselenggarakan dalam bentuk perkuliahan, tatap muka paling sedikit 16 (enam belas) kali termasuk seluruh tahap penilaian proses dan hasil pembelajaran.
+  utter_faq/mahasiswa_semester_antara:
+  - text: Mata kuliah pada semester antara dapat diselenggarakan apabila jumlah mahasiswa yang mendaftar minimal 15 mahasiswa pada mata kuliah tersebut. Dalam hal jumlah mahasiswa peserta yang mendaftar untuk mengikuti semester antara kurang dari 15 orang, maka Dekan Fakultas dapat menetapkan/mengambil kebijakan diselenggarakan atau tidak diselenggarakan mata kuliah tersebut.
+  utter_faq/mk_semester_antara:
+  - text: |-
+      Ketentuan Mata Kuliah di Semester Antara : 
+       a. Mata kuliah pada semester antara adalah mata kuliah mengulang atau mata kuliah yang belum pernah diambil pada semester utama. 
+       b. Mata kuliah yang diselenggarakan pada semester antara tidak boleh mata kuliah dengan pratikum atau kerja laboratorium. 
+       c. Mata kuliah pada semester antara dapat juga berasal dari mata kuliah dalam kurikulum yang diselenggarakan pada semester reguler, atau mata kuliah pengayaan pengetahuan dan keterampilan sesuai minat mahasiswa. 
+       d. Mata kuliah pada semester antara ditetapkan berdasarkan kesepakatan di prodi/jurusan/bagian. 
+       e. Mata kuliah pada semester antara dapat diselenggarakan apabila jumlah mahasiswa yang mendaftar minimal 15 mahasiswa pada mata kuliah tersebut. 
+       f. Dalam semester antara jumlah mata kuliah yang diambil maksimum tiga mata kuliah atau dengan jumlah maksimum 9 (sembilan) sks. 
+       g. Jika mata kuliah yang diambil pada semester antara adalah mata kuliah yang belum pernah diambil pada semester reguler, maka total jumlah sks mata kuliah baru yang diambil pada semester genap sebelumnya dan semester antara maksimal 24 (dua puluh empat) sks;
+  utter_faq/semester_antara:
+  - text: |-
+      Semester Antara adalah Semester yang diadakan diantara semester genap dan ganjil pada setiap tahun ajaran Universitas. Kegiatan semester antara adalah untuk membantu mahasiswa mencapai kompetensi yang ditetapkan dan dapat menyelesaikan studinya tepat waktu. Semester antara diselenggarakan untuk memanfaatkan waktu di antara dua semester utama. Ketentuan / Syarat penyelenggaraan semester antara adalah :
+       a. selama paling sedikit 8 (delapan) minggu, 
+       b. beban belajar mahasiswa paling banyak 9 (sembilan) satuan kredit semester; 
+       c. jika mata kuliah yang diambil pada semester antara adalah mata kuliah yang belum pernah diambil pada semester reguler, maka total jumlah sks mata kuliah baru yang diambil pada semester genap sebelumnya dan semester antara maksimal 24 (dua puluh empat) sks; 
+       d. jika semester antara diselenggarakan dalam bentuk perkuliahan, tatap muka paling sedikit 16 (enam belas) kali termasuk seluruh tahap penilaian proses dan hasil pembelajaran.
+  utter_faq/absen_kuliah:
+  - text: Mahasiswa tidak diizinkan mengikuti ujian semester jika  tidak memenuhi syarat kehadiran yang ditetapkan. Mahasiswa yang tidak dapat mengikuti perkuliahan karena mengikuti berbagai kegiatan secara melembaga yang ditunjukkan dengan surat keterangan/surat tugas dari Universitas Sriwijaya maupun Fakultas wajib difasilitasi. Sebagai pengganti perkuliahan yang tertinggal, mahasiswa diberikan tugas terstruktur dan terdokumentasi sebagai pengganti pembelajaran yang tidak diikutinya atau penilaian atas pelaksanaan tugas tersebut.
+  utter_faq/kehadiran:
+  - text: Mahasiswa wajib mengikuti kegiatan pembelajaran pada mata kuliah yang diikutinya minimal 80% dari total pembelajaran efektif yang ditetapkan. Selama Kegiatan Akademik berlangsung kamu diperbolehkan tidak mengikuti perkuliahan maksimal 3 kali.
+  utter_faq/jumlah_waktu_akademik:
+  - text: Jumlah waktu akademik yang tersedia setiap semester adalah 20 minggu yang dapat diisi dengan kegiatan-kegiatan pembelajaran efektif selama satu semester, ditambah berbagai kegiatan akademik non kuliah termasuk pekan sunyi, evaluasi termasuk perbaikan nilai (remedial/her). Bagi prodi di lingkungan Fakultas Kedokteran atau Fakultas lain yang menggunakan sistem blok menyesuaikan dengan aturan yang dicantumkan pada Pedoman Penyelenggaraan Kurikulum pada Fakultas tersebut.
+  utter_faq/pelaksanaan_kegiatan_akademik:
+  - text: Kegiatan akademik pada satu tahun akademik diselenggarakan dalam dua semester yaitu semester gasal (ganjil) dan semester genap. Semester gasal (ganjil) dimulai bulan Agustus sampai dengan bulan Desember, sedangkan semester genap dimulai bulan Januari sampai dengan Juli yang diisi dengan semester genap (Januari sampai Mei) dan jika diperlukan, dapat dilaksanakan semester antara (Mei sampai Juli).
+  utter_faq/pelaksanaan_kmmb:
+  - text: |-
+      1. Kuliah di luar prodi dalam lingkungan Universitas Sriwijaya, baik pada fakultas yang sama maupun pada fakultas yang berbeda, 
+      2. Kuliah di luar Universitas Sriwijaya, baik di prodi yang sama dengan prodi asal mahasiswa maupun di prodi yang berbeda, 
+      3. Kegiatan non-kuliah dalam bentuk pelatihan bela negara, pertukaran mahasiswa, magang, wirausaha, proyek kemanusiaan, asistensi mengajar di satuan pendidikan, penelitian, proyek studi independen, kuliah kerja nyata dan atau bentuk lain kegiatan pengabdian kepada masyarakat.
+  utter_faq/kegiatan_akademik_unsri:
+  - text: Kegiatan akademik dilaksanakan melalui  kuliah ceramah (kuliah umum), kuliah online, di halaman kampus, di lapangan, responsi dan tutorial,  seminar praktikum, praktik laboratorium, praktek studio, praktek bengkel, praktek lapangan, praktek kerja; kuliah kerja nyata (reguler atau tematik), dan penelitian, perancangan, atau pengembangan.
+  utter_faq/penting_akademik_unsri:
+  - text: Menumbuhkembangkan kecintaan mahasiswa untuk belajar agar mereka menjadi pembelajar sepanjang hayat, menumbuhkan kecintaan mahasiswa pada nilai dan budaya akademik, serta untuk meningkatkan semangat dosen dan mahasiswa untuk terlibat dalam berbagai aktivitas akademik.
+  utter_faq/peran_akademik_unsri:
+  - text: Mendorong daya nalar, softskill, dan menciptakan suasana belajar yang menyenangkan.
+  utter_faq/syarat_akademik_unsri:
+  - text: |-
+      1. Terdaftar sebagai mahasiswa aktif, 
+      2. Tidak dalam masa berhenti sementara (stop out), 
+      3. Telah membayar biaya pendidikan yang ditetapkan, 
+      4. Telah mengisi pendaftaran mata kuliah secara online dan menyerahkan print out Kartu Studi Mahasiswa (KSM) yang telah ditandatangani oleh PA untuk semester yang ditempuh ke sub-bagian akademik dan jurusan/prodi/bagian, 
+      5. Tidak dalam masa menjalani skorsing.
+  utter_faq/kewajiban_mahasiswa:
+  - text: Mengikuti seluruh kegiatan akademik yang ditetapkan pada kurikulum program studinya.
+  utter_faq/tujuan_belajar_unsri:
+  - text: Untuk mencapai kompetensi lulusan berdasarkan jenjang KKNI yang ditetapkan dalam kurikulum.
+  utter_faq/proses_belajar_unsri:
+  - text: Proses pembelajaran diarahkan agar efektif, efisien, relevan dan berbasis teknologi informasi. Proses pembelajaran pada pendidikan tinggi masa kini dan masa mendatang perlu memberikan pengalaman belajar langsung yang kontekstual kepada mahasiswa (experiential learning).
+  utter_faq/tujuan_unsri:
+  - text: Untuk menghasilkan lulusan yang mampu melaksanakan yang selaras dengan pembangunan nasional.
+actions:
+- action_check_areas
+- action_storing_feedback
+- action_savename
+forms: {}
+e2e_actions: []

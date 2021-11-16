@@ -1,0 +1,39 @@
+version: "2.0"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: introduce
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_iamabot
+      - action: utter_askname
+
+  - rule: Sapa setelah memberikan nama
+    steps:
+      - intent: give_name
+      - action: action_savename
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: check knowledge
+    steps:
+      - intent: challenge_knowledge
+      - action: action_check_areas
+
+  - rule: store feedback
+    steps:
+      - intent: feedback_give
+      - action: action_storing_feedback
+
+  - rule: faq
+    steps:
+      - intent: faq
+      - action: utter_faq
